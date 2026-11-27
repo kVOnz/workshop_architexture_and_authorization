@@ -21,7 +21,7 @@ class ProductCreate(ProductBase):
 class ProductUpdate(BaseModel):
     name: str | None = Field(default=None, min_length=2, max_length=256)
     price: float | None = Field(default=None, ge=0)
-    in_stock: bool | None = True
+    in_stock: bool | None = None
 
 class ProductOut(ProductBase):
     id: int
